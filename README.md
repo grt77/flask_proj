@@ -10,6 +10,27 @@ Build APIs only for a Content Management System
 
                                 ●Technology used is python,Framework used is Flask and database used is sqlite3
 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+To get started, install Python and flask on your local computer 
+if you don't have them already. You can optionally use another database system instead of SQLite, like Postgres
+
+## Create a virtual environment
+
+```bash
+python -m venv env
+```
+### To activate virtual environment
+
+```bash
+.\env\Scripts\activate
+```
+
+## requirements.txt
+
+```bash
+pip install -r requirements.txt
+```
 -----------------------------------------------------------------------------------------------------------------------------
  ● Firstly setup with the database:
            
@@ -68,20 +89,3 @@ I have created the following routes
                            ●searchcontent/<int:authorid>            ->Get all the content details which match with paticular keyword of paticular author id
     
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-## Create a virtual environment
-
-```bash
-python -m venv env
-```
-### To activate virtual environment
-
-```bash
-.\env\Scripts\activate
-```
-
-## requirements.txt
-
-```bash
-pip install -r requirements.txt
-```
