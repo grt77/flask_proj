@@ -67,3 +67,21 @@ I have created the following routes
                            
                            ●searchcontent/<int:authorid>            ->Get all the content details which match with paticular keyword of paticular author id
     
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Create a virtual environment
+
+```bash
+python -m venv env
+```
+### To activate virtual environment
+
+```bash
+.\env\Scripts\activate
+```
+
+## requirements.txt
+
+```bash
+pip install -r requirements.txt
+```
