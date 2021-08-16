@@ -12,7 +12,7 @@ def convert(data):
             temp['title']=item[1]
             temp['subject']=item[2]
             temp['summary']=item[3]
-            temp['filepath']='C:\\Users\\FL_LPT-255\\Desktop\\upload\\'+str(item[5])+'.pdf'
+            temp['filepath']=os.path.join('upload',str(item[5])+'.pdf'
             l.append(item[4])
             temp['category']=l
             newdata[item[0]]=temp
@@ -41,7 +41,7 @@ def content(authorid,contentid):
             data['title']=authordetails[1]
             data['subject']=authordetails[2]
             data['summary']=authordetails[3]
-            data['filepath']='C:\\Users\\FL_LPT-255\\Desktop\\upload\\'+str(authordetails[5])+'.pdf'
+            data['filepath']=os.path.join('upload',str(authordetails[5]))+'.pdf'
             cursor=conn.execute("select * from category where categoryid=?",(contentid,))
             for item in list(cursor):
                 categories.append(item[1])
@@ -146,7 +146,7 @@ def createcontent(id):
             conn=Dbconn.open_conn()
             cursor=conn.execute("insert into content(title,body,summary,authorid,file) values (?,?,?,?,?)",(title,body,summary,id,str(filename)))
             conn.commit()
-            file.save(os.path.join('C:\\Users\\FL_LPT-255\\Desktop\\upload',str(filename)+'.pdf'))
+            file.save(os.path.join('upload',str(filename)+'.pdf'))
             category=request.form['category'].split(",")
             cursor=conn.execute("select max(contentid) from content")
             max_count=int((list(cursor)[0])[0])
